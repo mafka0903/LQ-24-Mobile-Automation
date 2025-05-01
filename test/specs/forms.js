@@ -1,3 +1,4 @@
+const testData = require("../fixtures/data.fixtures");
 const FormsPage = require("../pageobjects/forms.page");
 
 describe("Forms screen", () => {
@@ -5,8 +6,9 @@ describe("Forms screen", () => {
     await FormsPage.clickFormsTab();
   });
   it("ma-3 should type into input field and display result", async () => {
-    await FormsPage.enterinputText("one");
-    await expect(FormsPage.inputTextResult).toHaveTextContaining("one");
+    const inputText = testData.DataForInputField.inputText;
+    await FormsPage.enterinputText(inputText);
+    await expect(FormsPage.inputTextResult).toHaveTextContaining(inputText);
   });
 
   it("ma-4 should toggle the switch ON and check text", async () => {

@@ -1,6 +1,6 @@
 exports.config = {
-  user: process.env.BROWSERSTACK_USERNAME || "bsuser_AK953w",
-  key: process.env.BROWSERSTACK_ACCESS_KEY || "nByyvq6VqcQRyv1yGeyE",
+  user: process.env.BROWSERSTACK_USERNAME || "bsuser_Y4oO0e",
+  key: process.env.BROWSERSTACK_ACCESS_KEY || "Ccey66kwqrP9LTz675RG",
 
   updateJob: false,
   specs: ["./test/specs/**.js"],
@@ -15,7 +15,7 @@ exports.config = {
       os_version: "9.0",
       app:
         process.env.BROWSERSTACK_APP_ID ||
-        "bs://3308200c78782aab489e1b401f8f95545abdd298",
+        "bs://cf9052a35ccf26a6f24eebc1864e9c29b5827461",
       "browserstack.debug": true,
     },
   ],
