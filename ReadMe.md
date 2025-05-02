@@ -1,27 +1,41 @@
-# Repo with test task for browserstack
+# LQ-24-Mobile_Automation
 
-## Task
-1.  Clone repo and install all dependencies.
-2.  Upload app Android-NativeDemoApp to browserstack using API ([Link](https://www.browserstack.com/docs/app-automate/api-reference/appium/apps#upload-an-app)) and add unique ID to the ```wdio.conf.js```.
-3.  Create test 5 test cases (locators can be found using [Appium Inspector](https://github.com/appium/appium-inspector/releases) that conected to the Browserstack account).
-4.  Create workflow with using secrets (for user and key in capabilities)([description of secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets)).
-5.  Create 2 config files (with different devices)
+# Summary
 
-## Tips
-1.  You can create multiple accounts in browserstack (demo trial - 100 minutes).
-2.  First of all find all necessary locators.
-3.  In the Appium Inspector at the header choose ```Select Cloud Providers -> Browserstack``` and into ```JSON Representation``` insert the next:
-```
-{
-  "appium:protocol": "https",
-  "appium:hostname": "hub.browserstack.com",
-  "appium:path": "/wd/hub",
-  "appium:maxInstances": 1,
-  "appium:app": "Your App ID is here",
-  "appium:os_version": "9.0",
-  "appium:deviceName": "Google Pixel 3",
-  "platformName": "Android",
-  "appium:autoAcceptAlerts": "true",
-  "appium:browserstack.appium_version": "1.22.0"
-}
-```
+LQ-24-Mobile_Automation is an automated testing project for mobile application, built using the Browserstack + WebdriverIO framework in Java Script.
+
+Links to test cases https://docs.google.com/spreadsheets/d/1aDls_8SA90U2nOnhoEJgI_k25Uat8WNxD8JpQqG14uE/edit?usp=sharing
+
+# Requirements
+
+Node v20.10.0
+
+# Steps to install
+
+Clone the repository:
+
+git clone https://github.com/mafka0903/LQ-24-Mobile-Automation.git
+
+Navigate to the project folder:
+
+cd LQ-24-Mobile_Automation
+
+Install dependencies:
+
+npm install
+
+# Steps to launch
+
+Run on first devise Pixel3:
+
+npm run pixel3
+
+Run on second devise Samsung:
+
+npm run samsung
+
+# Open report in browser:
+
+npm run allure-results
+
+Reports also avaliable on GitHub pages
