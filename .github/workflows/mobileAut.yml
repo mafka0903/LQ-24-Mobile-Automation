@@ -8,11 +8,6 @@ jobs:
   wdio-run:
     runs-on: ubuntu-latest
 
-    env:
-      BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
-      BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      BROWSERSTACK_APP_ID: ${{ secrets.BROWSERSTACK_APP_ID }}
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,9 +21,17 @@ jobs:
         run: npm install
 
       - name: Run wdio tests first device
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          BROWSERSTACK_APP_ID: ${{ secrets.BROWSERSTACK_APP_ID }}
         run: npm run pixel3
 
       - name: Run wdio tests second device
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+          BROWSERSTACK_APP_ID: ${{ secrets.BROWSERSTACK_APP_ID }}
         run: npm run samsung
 
       - name: Run generate Allure
