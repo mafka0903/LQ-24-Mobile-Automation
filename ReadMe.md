@@ -38,4 +38,4 @@ npm run samsung
 
 npm run allure-results
 
-Reports also avaliable on GitHub pages
+Reports also avaliable on GitHub pages https://mafka0903.github.io/LQ-24-Mobile-Automation/
