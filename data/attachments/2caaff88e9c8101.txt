@@ -1,8 +1,0 @@
-{
-  "message": "An element could not be located on the page using the given search parameters.",
-  "sessionId": "5ebdf5fba7282232e6451dc8950a405e1094ba0e",
-  "capabilities": {
-    "message": "An element could not be located on the page using the given search parameters.",
-    "sessionId": "5ebdf5fba7282232e6451dc8950a405e1094ba0e"
-  }
-}
