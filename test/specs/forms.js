@@ -3,6 +3,7 @@ const FormsPage = require("../pageobjects/forms.page");
 
 describe("Forms screen", () => {
   beforeEach(async () => {
+    await FormsPage.formsTab.waitForExist({ timeout: 5000 });
     await FormsPage.clickFormsTab();
   });
   it("ma-3 should type into input field and display result", async () => {
